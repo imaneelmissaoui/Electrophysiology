@@ -1,8 +1,10 @@
 
 # Web app For Monitoring a Patient's Health Status in Real Time 
 
-This is the second project i worked on during my internship as a Health Data scientist/ AI engineer at LIP6. The goal of the project was to create a dashboard to visualize and process in real time various data emanating from one or more CSV type files which are continuously filled during an acquisition in order to display various calculated physiologcial parameters notabely Heart Rate(HR), Breathing Rate(BR), Blood oxygen saturation(SpO2), and temperature(T) on the acquired signals.
+This is the second project i worked on during my internship as a Health Data scientist/ AI engineer at LIP6. The goal of the project was to create a dashboard to visualize and process in real time various data emanating from one or more CSV type files which are continuously filled during an acquisition in order to display various calculated physiological parameters notabely Heart Rate(HR), Breathing Rate(BR), Blood oxygen saturation(SpO2), and temperature(T) on the acquired signals.
 
+## Data 
+Pulse Transit Time PPG Dataset: Available on PhysioNet, this database contains synchronized PPG and ECG recordings obtained from the fingers of healthy subjects while sitting, walking and running. The database also includes measurements of blood pressure, temperature and accelerometer data, which can be useful for multimodal analysis ([PhysioNet](https://physionet.org/content/pulse-transit-time-ppg/1.1.0/)).
 
 ## Installation
 
@@ -48,7 +50,7 @@ Go to the project directory
 ```
 
 Start the server by running both the streamlit app and the 
-CSVUpdateSimulator to visualize the dashboard updating in real time as new data comes in teh simulated csv. 
+CSVUpdateSimulator to visualize the dashboard updating in real time as new data comes in the simulated csv. 
 
 ```bash
   streamlit run CSVDashboard.py 
@@ -63,8 +65,8 @@ CSVUpdateSimulator to visualize the dashboard updating in real time as new data 
 - Reading and writing periodically into the same file causes conflicts in which data can't be accessed properly.
 - The Timings in the CSV (Time column) aren't taken into consideration for a more accurate signal. Currently we rely on a constant sampling rate (500Hz).
 - Streamlit "resets" when data is updated and redraws everything instead of just updating the already existing elements.
-- Signal filtering can be improved later and updated to each signal instead of a generic filtering on the type of teh signal (PPG).
-- Blood Oxygen also generates negative values, management of these aberrant values need to be iplemented later. 
+- Signal filtering can be improved later and adapted to each signal instead of a generic filtering on the type of the signal (PPG).
+- Blood Oxygen also generates negative values, management of these aberrant values needs to be iplemented later. 
 
 ## Screenshots
 
