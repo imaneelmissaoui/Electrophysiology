@@ -66,7 +66,7 @@ CSVUpdateSimulator to visualize the dashboard updating in real time as new data 
 - The Timings in the CSV (Time column) aren't taken into consideration for a more accurate signal. Currently we rely on a constant sampling rate (500Hz).
 - Streamlit "resets" when data is updated and redraws everything instead of just updating the already existing elements.
 - Signal filtering can be improved later and adapted to each signal instead of a generic filtering on the type of the signal (PPG).
-- Blood Oxygen also generates negative values, management of these aberrant values needs to be iplemented later. 
+- Blood Oxygen also generates negative values, management of these aberrant values needs to be implemented later. 
 
 ## Screenshots
 
